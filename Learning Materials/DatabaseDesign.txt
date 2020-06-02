@@ -1,0 +1,40 @@
+DB Design steps:
+
+Optional: Write all the stuff that is associated with the system you are building.
+Just list it out and organize on ERD.
+
+1. Entity-relationship diagram (ERD)	
+	a. All entities as squares
+	b. Add all fields as circles (connect with lines)	
+	c. Connect entities as together with lines
+	d. One-to-One, one-to-many, and Many-to-Many relationships (optional and mandatory)
+
+
+2. Entities become DB Tables
+
+3. Normalization:   https://www.guru99.com/database-normalization.html
+NORMALIZATION is a database design technique that organizes tables in a manner that reduces redundancy
+and dependency of data. Normalization divides larger tables into smaller tables and links them using 
+relationships.
+
+	a. Each row of data must single piece of data (each record must be unique).  1NF
+	b. Decompose Tables based on Primary keys.  2NF
+	c. Link tables using foreign keys (primary keys in origin table)  2NF
+	d. There can be no dependencies. All things must be decomposed.  3NF
+	
+
+4. Create the tables on Paper.
+	a. Table names with primary keys
+	b. Field names with Data types
+	c. Link tables using foreign keys
+	d. optionally: Add cardinality (one-to-one, one-to-many)
+
+
+5. Create the physical tables on DBMS (Database Management System)
+	a. Have SQL server Express installed  
+		https://www.microsoft.com/en-us/sql-server/sql-server-downloads
+		Install as named instance (SQLDev), and use Integrated Security for Login.
+	b. Have SQL Server Management Studio installed
+		https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver15
+
+

@@ -13,6 +13,8 @@ namespace Notes_CRUD_App.Models
 
         public string LastName { get; set; }
 
+        public string FullName { get; set; }
+
         public Int64 UserID { get; set; }
 
         public DateTime DOB { get; set; }

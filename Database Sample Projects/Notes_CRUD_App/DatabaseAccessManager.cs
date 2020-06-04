@@ -13,7 +13,6 @@ namespace Notes_CRUD_App
         private string _dBConnectionString = "Data Source=devmachine\\sqldev;Integrated Security=True;Initial Catalog=LearningSQL";
         private SqlConnection _connection;
 
-
         private bool ConnectToDB()
         {
             bool connectionSuccessful = false;
@@ -30,7 +29,6 @@ namespace Notes_CRUD_App
             }
 
             return connectionSuccessful;
-
         }
 
 
@@ -93,6 +91,7 @@ namespace Notes_CRUD_App
                         user.LastName = (string)reader["LNAME"];
                         user.DOB = (DateTime)reader["DOB"];
                         user.UserID = (Int64)reader["USER_ID"];
+                        user.FullName = user.FirstName + " " + user.LastName;
 
                         users.Add(user);
                     }

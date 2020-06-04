@@ -25,8 +25,17 @@ namespace Notes_CRUD_App
 
         private void button1_Click(object sender, EventArgs e)
         {
-            tabControl1.TabPages.Add("Note");
 
+            if (checkedListBox1.SelectedIndex != -1)
+            {
+                CreateNewTabPage();
+            }
+
+        }
+
+        private void CreateNewTabPage()
+        {
+            tabControl1.TabPages.Add("Note");
 
             var newTab = tabControl1.TabPages[tabControl1.TabPages.Count - 1];
 
@@ -37,7 +46,6 @@ namespace Notes_CRUD_App
             tabControl1.SelectTab(newTab);
 
             _tabIterator++;
-
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -107,7 +115,17 @@ namespace Notes_CRUD_App
 
         private TextBox CreateNoteTextBox(TabPage tab)
         {
-            Note note = (Note)checkedListBox1.SelectedItem;
+            Note note;
+
+            if(checkedListBox1.SelectedIndex != -1)
+            {
+                note = (Note)checkedListBox1.SelectedItem;
+            }
+            else
+            {
+                note = new Note();
+                note.NoteDate = DateTime.Now;
+            }
 
             var textBox = new System.Windows.Forms.TextBox();
 
@@ -144,6 +162,12 @@ namespace Notes_CRUD_App
         {
             var tabPage = tabControl1.SelectedTab;
             tabControl1.TabPages.Remove(tabPage);
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            checkedListBox1.SelectedIndex = -1;
+            CreateNewTabPage();
         }
     }
 }

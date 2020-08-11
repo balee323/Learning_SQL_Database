@@ -3,14 +3,14 @@ USE LearningSQL
 INSERT INTO Users
 (FNAME, LNAME, DOB)
 VALUES
-('Brian', 'Lee', '09/14/1981'),
-('Yeji', 'Choi', '09/21/1982')
+('John', 'Doe', '09/14/1975'),
+('Jane', 'Doe', '07/21/1976')
 
 
 --find userID
 SELECT USER_ID FROM Users 
-WHERE FNAME like '%Brian' 
-AND DOB = '09/14/1981'
+WHERE FNAME like '%John' 
+AND DOB = '09/14/1975'
 
 
 SELECT GETDATE()

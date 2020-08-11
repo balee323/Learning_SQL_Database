@@ -5,9 +5,10 @@ Just list it out and organize on ERD.
 
 1. Entity-relationship diagram (ERD)	
 	a. All entities as squares
-	b. Add all fields as circles (connect with lines)	
-	c. Connect entities as together with lines
-	d. One-to-One, one-to-many, and Many-to-Many relationships (optional and mandatory)
+	b. Add all fields as circles (connect with lines)
+	c. Action is Diamond
+	d. Connect entities as together with lines
+	e. One-to-One, one-to-many, and Many-to-Many relationships (optional and mandatory)
 
 
 2. Entities become DB Tables
